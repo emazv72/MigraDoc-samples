@@ -1,0 +1,810 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+    <Attributes>
+        <Info Title="Hello, MigraDoc" Subject="Demonstrates an excerpt of the capabilities of MigraDoc." Author="Stefan Lange" />
+    </Attributes>
+    <Styles>
+        <Style Name="Normal">
+            <Font Name="Segoe UI" />
+            <ParagraphFormat />
+        </Style>
+        <Style Name="Heading1">
+            <Font Name="Segoe UI Light" Size="16" Color="DarkBlue" />
+            <ParagraphFormat SpaceAfter="6" KeepWithNext="true" PageBreakBefore="true" OutlineLevel="Level1" />
+        </Style>
+        <Style Name="Heading2">
+            <Font Size="14" />
+            <ParagraphFormat SpaceBefore="6" PageBreakBefore="false" OutlineLevel="Level2" />
+        </Style>
+        <Style Name="Heading3">
+            <Font Size="12" Italic="true" />
+            <ParagraphFormat SpaceAfter="3" OutlineLevel="Level3" />
+        </Style>
+        <Style Name="Heading4">
+            <ParagraphFormat OutlineLevel="Level4" />
+        </Style>
+        <Style Name="Heading5">
+            <ParagraphFormat OutlineLevel="Level5" />
+        </Style>
+        <Style Name="Heading6">
+            <ParagraphFormat OutlineLevel="Level6" />
+        </Style>
+        <Style Name="Heading7">
+            <ParagraphFormat OutlineLevel="Level7" />
+        </Style>
+        <Style Name="Heading8">
+            <ParagraphFormat OutlineLevel="Level8" />
+        </Style>
+        <Style Name="Heading9">
+            <ParagraphFormat OutlineLevel="Level9" />
+        </Style>
+        <Style Name="List" />
+        <Style Name="Footnote" />
+        <Style Name="Header">
+            <ParagraphFormat>
+                <TabStops>
+                    <TabStop Add="true" Position="16cm" Alignment="Right" />
+                </TabStops>
+            </ParagraphFormat>
+        </Style>
+        <Style Name="Footer">
+            <ParagraphFormat>
+                <TabStops>
+                    <TabStop Add="true" Position="8cm" Alignment="Center" />
+                </TabStops>
+            </ParagraphFormat>
+        </Style>
+        <Style Name="Hyperlink" />
+        <Style Name="InvalidStyleName">
+            <Font Bold="true" Underline="Dash" Color="Lime" />
+            <ParagraphFormat />
+        </Style>
+        <Style Name="TextBox" BaseStyle="Normal">
+            <ParagraphFormat Alignment="Justify">
+                <Borders Width="2.5" DistanceFromTop="3" DistanceFromBottom="3" DistanceFromLeft="3" DistanceFromRight="3" />
+                <Shading Color="SkyBlue" />
+            </ParagraphFormat>
+        </Style>
+        <Style Name="TOC" BaseStyle="Normal">
+            <Font Color="Blue" />
+            <ParagraphFormat>
+                <TabStops>
+                    <TabStop Add="true" Position="16cm" Alignment="Right" Leader="Dots" />
+                </TabStops>
+            </ParagraphFormat>
+        </Style>
+    </Styles>
+    <Sections>
+        <Section>
+            
+            <p>
+                <Attributes>
+                    <Format SpaceAfter="3cm" />
+                </Attributes>
+                                      
+                  <Text>
+                    Text can be formatted <b>bold</b>, <i>italic</i> or <Font bold="true" italic="true">bold and italic</Font>
+                  </Text>
+                  
+                  <Text>
+                    You can set the <font size="15">size</font>                    
+                    the <font color="firebrick">color</font>
+                    the <font Name = "Times New Roman" size="12">font</font>        
+                    <br/>
+                    Altra riga....
+                  </Text>
+
+            </p>
+            <Image Name="../../../../assets/images/Logo landscape.png" Width="10cm">
+                
+                
+            </Image>
+            <p>
+                <Attributes>
+                    <Format SpaceBefore="8cm" SpaceAfter="3cm">
+                        <Font Size="16" Color="DarkRed" />
+                    </Format>
+                </Attributes>
+                <Text>
+                    <![CDATA[A sample document that demonstrates the]]>
+                </Text>
+                <Chr Value="LineBreak" />
+                <Text>
+                    <![CDATA[capabilities of MigraDoc]]>
+                </Text>
+            </p>
+            <p>
+                
+                <Text>
+                    <![CDATA[Rendering date: ]]>
+                </Text>
+                <Field Type="Date" />
+            </p>
+            <Pagebreak />
+            <p>
+                <Attributes>
+                    <Format SpaceAfter="24" OutlineLevel="Level1">
+                        <Font Size="14" Bold="true" />
+                    </Format>
+                </Attributes>
+                <Text>
+                    <![CDATA[Table of Contents]]>
+                </Text>
+            </p>
+            <p Style="TOC">
+                
+                <Hyperlink Name="Paragraphs">
+                    <Text>
+                        <![CDATA[Paragraphs]]>
+                    </Text>
+                    <Chr Value="Tab" />
+                    <Field Type="PageRef" Name="Paragraphs" />
+                </Hyperlink>
+            </p>
+            <p Style="TOC">
+                
+                <Hyperlink Name="Tables">
+                    <Text>
+                        <![CDATA[Tables]]>
+                    </Text>
+                    <Chr Value="Tab" />
+                    <Field Type="PageRef" Name="Tables" />
+                </Hyperlink>
+            </p>
+            <p Style="TOC">
+                
+                <Hyperlink Name="Charts">
+                    <Text>
+                        <![CDATA[Charts]]>
+                    </Text>
+                    <Chr Value="Tab" />
+                    <Field Type="PageRef" Name="Charts" />
+                </Hyperlink>
+            </p>
+        </Section>
+        <Section>
+            <Attributes>
+                <PageSetup OddAndEvenPagesHeaderFooter="true" StartingNumber="1" />
+            </Attributes>
+            <PrimaryHeader>
+                
+                <p>
+                    
+                    <Chr Value="Tab" />
+                    <Text>
+                        <![CDATA[Odd Page Header]]>
+                    </Text>
+                </p>
+            </PrimaryHeader>
+            <EvenpageHeader>
+                
+                <p>
+                    
+                    <Text>
+                        <![CDATA[Even Page Header]]>
+                    </Text>
+                </p>
+            </EvenpageHeader>
+            <PrimaryFooter>
+                
+                <p>
+                    
+                    <Chr Value="Tab" />
+                    <Field Type="Page" />
+                </p>
+            </PrimaryFooter>
+            <EvenpageFooter>
+                
+                <p>
+                    
+                    <Chr Value="Tab" />
+                    <Field Type="Page" />
+                </p>
+            </EvenpageFooter>
+            <p Style="Heading1">
+                
+                <Text>
+                    <![CDATA[Paragraph Layout Overview]]>
+                </Text>
+                <Field Name="Paragraphs" Type="Bookmark" />
+            </p>
+            <p Style="Heading2">
+                
+                <Text>
+                    <![CDATA[Alignment]]>
+                </Text>
+            </p>
+            <p Style="Heading3">
+                
+                <Text>
+                    <![CDATA[Left Aligned]]>
+                </Text>
+            </p>
+            <p>
+                <Attributes>
+                    <Format Alignment="Left" />
+                </Attributes>
+                <Text>
+                    <![CDATA[Loboreet autpat, quis adigna conse dipit la consed exeril et utpatetuer autat, voloboreet, consequamet ilit nos aut in henit ullam, sim doloreratis dolobore tat, venim quissequat. Nisci tat laor ametumsan vulla feuisim ing eliquisi tatum autat, velenisit iustionsed tis dunt exerostrud dolore verae.]]>
+                </Text>
+            </p>
+            <p Style="Heading3">
+                
+                <Text>
+                    <![CDATA[Right Aligned]]>
+                </Text>
+            </p>
+            <p>
+                <Attributes>
+                    <Format Alignment="Right" />
+                </Attributes>
+                <Text>
+                    <![CDATA[Loboreet autpat, quis adigna conse dipit la consed exeril et utpatetuer autat, voloboreet, consequamet ilit nos aut in henit ullam, sim doloreratis dolobore tat, venim quissequat. Nisci tat laor ametumsan vulla feuisim ing eliquisi tatum autat, velenisit iustionsed tis dunt exerostrud dolore verae.]]>
+                </Text>
+            </p>
+            <p Style="Heading3">
+                
+                <Text>
+                    <![CDATA[Centered]]>
+                </Text>
+            </p>
+            <p>
+                <Attributes>
+                    <Format Alignment="Center" />
+                </Attributes>
+                <Text>
+                    <![CDATA[Loboreet autpat, quis adigna conse dipit la consed exeril et utpatetuer autat, voloboreet, consequamet ilit nos aut in henit ullam, sim doloreratis dolobore tat, venim quissequat. Nisci tat laor ametumsan vulla feuisim ing eliquisi tatum autat, velenisit iustionsed tis dunt exerostrud dolore verae.]]>
+                </Text>
+            </p>
+            <p Style="Heading3">
+                
+                <Text>
+                    <![CDATA[Justified]]>
+                </Text>
+            </p>
+            <p>
+                <Attributes>
+                    <Format Alignment="Justify" />
+                </Attributes>
+                <Text>
+                    <![CDATA[Incinibh ecte dionsent am, sisl ute magna faccum ing eu feugait ulla consequismod tetum zzrilluptat. Ut velis accum dit la corper inci essequat, venis nisl dolutat. Sandipit esequisit autpat. Magnibh et laortie feugiamcommy nulluptat dolorpero euipis nonum augait wis dit, quamcon sequipit at vel il eui blaorper si tat ipit at nis nullan hent num dunt irit, sum dolendio consendigna consent lan ut illan etue miniam dolenisis nonsenim inim quat, conulla orercinisim vel inci ent illam quat volore veliquam amconsequat. Ut lut incincipit nullaor iriurercip et luptat erat illamco mmoluptat.]]>
+                </Text>
+                <Chr Value="LineBreak" />
+                <Text>
+                    <![CDATA[Ut iriusciduis nonsed do el dolut ea autem il dolore verci blam, quatue el ute facilis cidunt dit alisl ut lut num vercinc illaore del ilisi blandre commodit, quamcon sequipsusto dunt ver illaorperit utpat, velisci lisciniam vent alis nostisi et, quisit, con eu facipit vulputpat.]]>
+                </Text>
+            </p>
+            <p Style="Heading2">
+                
+                <Text>
+                    <![CDATA[Indent]]>
+                </Text>
+            </p>
+            <p Style="Heading3">
+                
+                <Text>
+                    <![CDATA[Left Indent]]>
+                </Text>
+            </p>
+            <p>
+                <Attributes>
+                    <Format LeftIndent="2cm" />
+                </Attributes>
+                <Text>
+                    <![CDATA[Loboreet autpat, quis adigna conse dipit la consed exeril et utpatetuer autat, voloboreet, consequamet ilit nos aut in henit ullam, sim doloreratis dolobore tat, venim quissequat. Nisci tat laor ametumsan vulla feuisim ing eliquisi tatum autat, velenisit iustionsed tis dunt exerostrud dolore verae.]]>
+                </Text>
+            </p>
+            <p Style="Heading3">
+                
+                <Text>
+                    <![CDATA[Right Indent]]>
+                </Text>
+            </p>
+            <p>
+                <Attributes>
+                    <Format RightIndent="1in" />
+                </Attributes>
+                <Text>
+                    <![CDATA[Loboreet autpat, quis adigna conse dipit la consed exeril et utpatetuer autat, voloboreet, consequamet ilit nos aut in henit ullam, sim doloreratis dolobore tat, venim quissequat. Nisci tat laor ametumsan vulla feuisim ing eliquisi tatum autat, velenisit iustionsed tis dunt exerostrud dolore verae.]]>
+                </Text>
+            </p>
+            <p Style="Heading3">
+                
+                <Text>
+                    <![CDATA[First Line Indent]]>
+                </Text>
+            </p>
+            <p>
+                <Attributes>
+                    <Format FirstLineIndent="12mm" />
+                </Attributes>
+                <Text>
+                    <![CDATA[Loboreet autpat, quis adigna conse dipit la consed exeril et utpatetuer autat, voloboreet, consequamet ilit nos aut in henit ullam, sim doloreratis dolobore tat, venim quissequat. Nisci tat laor ametumsan vulla feuisim ing eliquisi tatum autat, velenisit iustionsed tis dunt exerostrud dolore verae.]]>
+                </Text>
+            </p>
+            <p Style="Heading3">
+                
+                <Text>
+                    <![CDATA[First Line Negative Indent]]>
+                </Text>
+            </p>
+            <p>
+                <Attributes>
+                    <Format LeftIndent="1.5cm" FirstLineIndent="-1.5cm" />
+                </Attributes>
+                <Text>
+                    <![CDATA[Loboreet autpat, quis adigna conse dipit la consed exeril et utpatetuer autat, voloboreet, consequamet ilit nos aut in henit ullam, sim doloreratis dolobore tat, venim quissequat. Nisci tat laor ametumsan vulla feuisim ing eliquisi tatum autat, velenisit iustionsed tis dunt exerostrud dolore verae.]]>
+                </Text>
+            </p>
+            <p Style="Heading2">
+                
+                <Text>
+                    <![CDATA[Formatted Text]]>
+                </Text>
+            </p>
+            <p>
+                
+                <Text>
+                    <![CDATA[Text can be formatted ]]>
+                </Text>
+                <Text>
+                    <Font Bold="true" />
+                    <Text>
+                        <![CDATA[bold]]>
+                    </Text>
+                </Text>
+                <Text>
+                    <![CDATA[, ]]>
+                </Text>
+                <Text>
+                    <Font Italic="true" />
+                    <Text>
+                        <![CDATA[italic]]>
+                    </Text>
+                </Text>
+                <Text>
+                    <![CDATA[, or ]]>
+                </Text>
+                <Text>
+                    <Font Bold="true" Italic="true" />
+                    <Text>
+                        <![CDATA[bold & italic]]>
+                    </Text>
+                </Text>
+                <Text>
+                    <![CDATA[.]]>
+                </Text>
+                <Chr Value="LineBreak" />
+                <Text>
+                    <![CDATA[You can set the ]]>
+                </Text>
+                <Text>
+                    <Font Size="15" />
+                    <Text>
+                        <![CDATA[size]]>
+                    </Text>
+                </Text>
+                <Text>
+                    <![CDATA[, the ]]>
+                </Text>
+                <Text>
+                    <Font Color="Firebrick" />
+                    <Text>
+                        <![CDATA[color]]>
+                    </Text>
+                </Text>
+                <Text>
+                    <![CDATA[, the ]]>
+                </Text>
+                <Text>
+                    <Font Name="Times New Roman" Size="12" />
+                    <Text>
+                        <![CDATA[font]]>
+                    </Text>
+                </Text>
+                <Text>
+                    <![CDATA[.]]>
+                </Text>
+                <Chr Value="LineBreak" />
+                <Text>
+                    <![CDATA[You can set the ]]>
+                </Text>
+                <Text>
+                    <Font Subscript="true" />
+                    <Text>
+                        <![CDATA[subscript]]>
+                    </Text>
+                </Text>
+                <Text>
+                    <![CDATA[ or ]]>
+                </Text>
+                <Text>
+                    <Font Superscript="true" />
+                    <Text>
+                        <![CDATA[superscript]]>
+                    </Text>
+                </Text>
+                <Text>
+                    <![CDATA[.]]>
+                </Text>
+            </p>
+            <Pagebreak />
+            <p Style="Heading2">
+                
+                <Text>
+                    <![CDATA[Borders and Shading]]>
+                </Text>
+            </p>
+            <p Style="Heading3">
+                
+                <Text>
+                    <![CDATA[Border around Paragraph]]>
+                </Text>
+            </p>
+            <p>
+                <Attributes>
+                    <Format>
+                        <Borders Width="2.5" Color="Navy" DistanceFromTop="3" DistanceFromBottom="3" DistanceFromLeft="3" DistanceFromRight="3" />
+                    </Format>
+                </Attributes>
+                <Text>
+                    <![CDATA[Incinibh ecte dionsent am, sisl ute magna faccum ing eu feugait ulla consequismod tetum zzrilluptat. Ut velis accum dit la corper inci essequat, venis nisl dolutat. Sandipit esequisit autpat. Magnibh et laortie feugiamcommy nulluptat dolorpero euipis nonum augait wis dit, quamcon sequipit at vel il eui blaorper si tat ipit at nis nullan hent num dunt irit, sum dolendio consendigna consent lan ut illan etue miniam dolenisis nonsenim inim quat, conulla orercinisim vel inci ent illam quat volore veliquam amconsequat. Ut lut incincipit nullaor iriurercip et luptat erat illamco mmoluptat.]]>
+                </Text>
+                <Chr Value="LineBreak" />
+                <Text>
+                    <![CDATA[Ut iriusciduis nonsed do el dolut ea autem il dolore verci blam, quatue el ute facilis cidunt dit alisl ut lut num vercinc illaore del ilisi blandre commodit, quamcon sequipsusto dunt ver illaorperit utpat, velisci lisciniam vent alis nostisi et, quisit, con eu facipit vulputpat.]]>
+                </Text>
+            </p>
+            <p Style="Heading3">
+                
+                <Text>
+                    <![CDATA[Shading]]>
+                </Text>
+            </p>
+            <p>
+                <Attributes>
+                    <Format>
+                        <Shading Color="LightCoral" />
+                    </Format>
+                </Attributes>
+                <Text>
+                    <![CDATA[Loboreet autpat, quis adigna conse dipit la consed exeril et utpatetuer autat, voloboreet, consequamet ilit nos aut in henit ullam, sim doloreratis dolobore tat, venim quissequat. Nisci tat laor ametumsan vulla feuisim ing eliquisi tatum autat, velenisit iustionsed tis dunt exerostrud dolore verae.]]>
+                </Text>
+            </p>
+            <p Style="Heading3">
+                
+                <Text>
+                    <![CDATA[Borders & Shading]]>
+                </Text>
+            </p>
+            <p Style="TextBox">
+                
+                <Text>
+                    <![CDATA[Incinibh ecte dionsent am, sisl ute magna faccum ing eu feugait ulla consequismod tetum zzrilluptat. Ut velis accum dit la corper inci essequat, venis nisl dolutat. Sandipit esequisit autpat. Magnibh et laortie feugiamcommy nulluptat dolorpero euipis nonum augait wis dit, quamcon sequipit at vel il eui blaorper si tat ipit at nis nullan hent num dunt irit, sum dolendio consendigna consent lan ut illan etue miniam dolenisis nonsenim inim quat, conulla orercinisim vel inci ent illam quat volore veliquam amconsequat. Ut lut incincipit nullaor iriurercip et luptat erat illamco mmoluptat.]]>
+                </Text>
+                <Chr Value="LineBreak" />
+                <Text>
+                    <![CDATA[Ut iriusciduis nonsed do el dolut ea autem il dolore verci blam, quatue el ute facilis cidunt dit alisl ut lut num vercinc illaore del ilisi blandre commodit, quamcon sequipsusto dunt ver illaorperit utpat, velisci lisciniam vent alis nostisi et, quisit, con eu facipit vulputpat.]]>
+                </Text>
+            </p>
+            <p Style="Heading1">
+                
+                <Text>
+                    <![CDATA[Table Overview]]>
+                </Text>
+                <Field Name="Tables" Type="Bookmark" />
+            </p>
+            <p Style="Heading2">
+                
+                <Text>
+                    <![CDATA[Simple Tables]]>
+                </Text>
+            </p>
+            <Table>
+                <Attributes>
+                    <Borders Width="0.75" />
+                </Attributes>
+                <Columns>
+                    <Column Width="2cm">
+                        <Attributes>
+                            <Format Alignment="Center" />
+                        </Attributes>
+                    </Column>
+                    <Column Width="5cm">
+                        
+                    </Column>
+                </Columns>
+                <Rows>
+                    <Row>
+                        <Attributes>
+                            <Shading Color="PaleGoldenrod" />
+                        </Attributes>
+                        <Cell>
+                            <Attributes>
+                                <Borders>
+                                    <Top Style="Single" Width="1.5" Color="Black" />
+                                    <Left Style="Single" Width="1.5" Color="Black" />
+                                </Borders>
+                            </Attributes>
+                            <p>
+                                
+                                <Text>
+                                    <![CDATA[Itemus]]>
+                                </Text>
+                            </p>
+                        </Cell>
+                        <Cell>
+                            <Attributes>
+                                <Borders>
+                                    <Top Style="Single" Width="1.5" Color="Black" />
+                                    <Right Style="Single" Width="1.5" Color="Black" />
+                                </Borders>
+                            </Attributes>
+                            <p>
+                                
+                                <Text>
+                                    <![CDATA[Descriptum]]>
+                                </Text>
+                            </p>
+                        </Cell>
+                    </Row>
+                    <Row>
+                        
+                        <Cell>
+                            <Attributes>
+                                <Borders>
+                                    <Left Style="Single" Width="1.5" Color="Black" />
+                                </Borders>
+                            </Attributes>
+                            <p>
+                                
+                                <Text>
+                                    <![CDATA[1]]>
+                                </Text>
+                            </p>
+                        </Cell>
+                        <Cell>
+                            <Attributes>
+                                <Borders>
+                                    <Right Style="Single" Width="1.5" Color="Black" />
+                                </Borders>
+                            </Attributes>
+                            <p>
+                                
+                                <Text>
+                                    <![CDATA[Andigna cons nonsectem accummo diamet nis diat.]]>
+                                </Text>
+                            </p>
+                        </Cell>
+                    </Row>
+                    <Row>
+                        
+                        <Cell>
+                            <Attributes>
+                                <Borders>
+                                    <Left Style="Single" Width="1.5" Color="Black" />
+                                    <Bottom Style="Single" Width="1.5" Color="Black" />
+                                </Borders>
+                            </Attributes>
+                            <p>
+                                
+                                <Text>
+                                    <![CDATA[2]]>
+                                </Text>
+                            </p>
+                        </Cell>
+                        <Cell>
+                            <Attributes>
+                                <Borders>
+                                    <Bottom Style="Single" Width="1.5" Color="Black" />
+                                    <Right Style="Single" Width="1.5" Color="Black" />
+                                </Borders>
+                            </Attributes>
+                            <p>
+                                
+                                <Text>
+                                    <![CDATA[Loboreet autpat, quis adigna conse dipit la consed exeril et utpatetuer autat, voloboreet, consequamet ilit nos aut in henit ullam, sim doloreratis dolobore tat, venim quissequat. Nisci tat laor ametumsan vulla feuisim ing eliquisi tatum autat, velenisit iustionsed tis dunt exerostrud dolore verae.]]>
+                                </Text>
+                            </p>
+                        </Cell>
+                    </Row>
+                </Rows>
+            </Table>
+            <p Style="Heading2">
+                
+                <Text>
+                    <![CDATA[Cell Alignment]]>
+                </Text>
+            </p>
+            <Table TopPadding="5" BottomPadding="5">
+                <Attributes>
+                    <Format>
+                        <Shading Color="LavenderBlush" />
+                    </Format>
+                    <Borders Visible="true" />
+                    <Shading Color="Salmon" />
+                </Attributes>
+                <Columns>
+                    <Column>
+                        <Attributes>
+                            <Format Alignment="Left" />
+                        </Attributes>
+                    </Column>
+                    <Column>
+                        <Attributes>
+                            <Format Alignment="Center" />
+                        </Attributes>
+                    </Column>
+                    <Column>
+                        <Attributes>
+                            <Format Alignment="Right" />
+                        </Attributes>
+                    </Column>
+                </Columns>
+                <Rows Height="35">
+                    <Row VerticalAlignment="Top">
+                        
+                        <Cell>
+                            
+                            <p>
+                                
+                                <Text>
+                                    <![CDATA[Text]]>
+                                </Text>
+                            </p>
+                        </Cell>
+                        <Cell>
+                            
+                            <p>
+                                
+                                <Text>
+                                    <![CDATA[Text]]>
+                                </Text>
+                            </p>
+                        </Cell>
+                        <Cell>
+                            
+                            <p>
+                                
+                                <Text>
+                                    <![CDATA[Text]]>
+                                </Text>
+                            </p>
+                        </Cell>
+                    </Row>
+                    <Row VerticalAlignment="Center">
+                        
+                        <Cell>
+                            
+                            <p>
+                                
+                                <Text>
+                                    <![CDATA[Text]]>
+                                </Text>
+                            </p>
+                        </Cell>
+                        <Cell>
+                            
+                            <p>
+                                
+                                <Text>
+                                    <![CDATA[Text]]>
+                                </Text>
+                            </p>
+                        </Cell>
+                        <Cell>
+                            
+                            <p>
+                                
+                                <Text>
+                                    <![CDATA[Text]]>
+                                </Text>
+                            </p>
+                        </Cell>
+                    </Row>
+                    <Row VerticalAlignment="Bottom">
+                        
+                        <Cell>
+                            
+                            <p>
+                                
+                                <Text>
+                                    <![CDATA[Text]]>
+                                </Text>
+                            </p>
+                        </Cell>
+                        <Cell>
+                            
+                            <p>
+                                
+                                <Text>
+                                    <![CDATA[Text]]>
+                                </Text>
+                            </p>
+                        </Cell>
+                        <Cell>
+                            
+                            <p>
+                                
+                                <Text>
+                                    <![CDATA[Text]]>
+                                </Text>
+                            </p>
+                        </Cell>
+                    </Row>
+                </Rows>
+            </Table>
+            <p Style="Heading2">
+                
+                <Text>
+                    <![CDATA[Cell Merge]]>
+                </Text>
+            </p>
+            <Table TopPadding="5" BottomPadding="5">
+                <Attributes>
+                    <Borders Visible="true" />
+                </Attributes>
+                <Columns>
+                    <Column>
+                        <Attributes>
+                            <Format Alignment="Left" />
+                        </Attributes>
+                    </Column>
+                    <Column>
+                        <Attributes>
+                            <Format Alignment="Center" />
+                        </Attributes>
+                    </Column>
+                    <Column>
+                        <Attributes>
+                            <Format Alignment="Right" />
+                        </Attributes>
+                    </Column>
+                </Columns>
+                <Rows Height="35">
+                    <Row>
+                        
+                        <Cell MergeRight="1">
+                            
+                            <p>
+                                
+                                <Text>
+                                    <![CDATA[Merge Right]]>
+                                </Text>
+                            </p>
+                        </Cell>
+                    </Row>
+                    <Row VerticalAlignment="Bottom">
+                        
+                        <Cell MergeDown="1" VerticalAlignment="Bottom">
+                            
+                            <p>
+                                
+                                <Text>
+                                    <![CDATA[Merge Down]]>
+                                </Text>
+                            </p>
+                        </Cell>
+                    </Row>
+                    <Row>
+                        
+                    </Row>
+                </Rows>
+            </Table>
+            <p Style="Heading1">
+                
+                <Text>
+                    <![CDATA[Chart Overview]]>
+                </Text>
+                <Field Name="Charts" Type="Bookmark" />
+            </p>
+            <p Style="Heading2">
+                
+                <Text>
+                    <![CDATA[Sample Chart]]>
+                </Text>
+            </p>
+        
+        </Section>
+    </Sections>
+</Document>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.IO;
 using MigraDoc.Rendering;
 
 namespace HelloMigraDoc
@@ -14,11 +15,41 @@ namespace HelloMigraDoc
             // Create a MigraDoc document.
             var document = Documents.CreateDocument();
 
-            //var ddl = MigraDoc.DocumentObjectModel.IO.DdlWriter.WriteToString(document);
-            MigraDoc.DocumentObjectModel.IO.DdlWriter.WriteToFile(document, "MigraDoc.mdddl");
+			//var ddl = MigraDoc.DocumentObjectModel.IO.DdlWriter.WriteToString(document);
+			//MigraDoc.DocumentObjectModel.IO.DdlWriter.WriteToFile(document, "MigraDoc.mdddl");
 
-            var renderer = new PdfDocumentRenderer(true);
-            renderer.Document = document;
+			// genera xml
+			//MigraDoc.DocumentObjectModel.IO.Xml.DdlWriter.WriteToFile(document, "MigraDoc.xml");
+
+			// genera mddl
+			//MigraDoc.DocumentObjectModel.IO.DdlWriter.WriteToFile(document, "MigraDoc.mdddl");
+
+			var document2 = MigraDoc.DocumentObjectModel.IO.DdlReader.DocumentFromFile("MigraDoc.mdddl");
+			//var document3 = MigraDoc.DocumentObjectModel.IO.Xml.DdlReader.DocumentFromFile("MigraDoc.xml");
+
+			MigraDoc.DocumentObjectModel.Document document3 = null;
+
+			using (StreamReader sr = File.OpenText("MigraDoc.xml"))
+			{
+				var errors = new MigraDoc.DocumentObjectModel.IO.DdlReaderErrors();
+				var reader = new MigraDoc.DocumentObjectModel.IO.Xml.DdlReader(sr, errors);
+
+				document3 = reader.ReadDocument();
+
+				using (StreamWriter sw = new StreamWriter("MigraDoc.xml.error"))
+				{
+					foreach (MigraDoc.DocumentObjectModel.IO.DdlReaderError error in errors)
+					{
+						sw.WriteLine("{0}:{1} {2} {3}", error.SourceLine, error.SourceColumn, error.ErrorLevel, error.ErrorMessage);
+
+					}
+
+				}
+
+			}
+
+			var renderer = new PdfDocumentRenderer(true);
+            renderer.Document = document3;
 
             renderer.RenderDocument();
 

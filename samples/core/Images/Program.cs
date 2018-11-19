@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.IO;
 using MigraDoc.DocumentObjectModel;
 using MigraDoc.Rendering;
 using MigraDoc.RtfRendering;
@@ -17,7 +18,29 @@ namespace Images
             // Create a MigraDoc document.
             var document = CreateDocument();
 
-            var ddl = MigraDoc.DocumentObjectModel.IO.DdlWriter.WriteToString(document);
+#if DEBUG
+			MigraDoc.DocumentObjectModel.IO.Xml.DdlWriter.WriteToFile(document, "MigraDoc.xml");
+			using (StreamReader sr = File.OpenText("MigraDoc.xml"))
+			{
+				var errors = new MigraDoc.DocumentObjectModel.IO.DdlReaderErrors();
+				var reader = new MigraDoc.DocumentObjectModel.IO.Xml.DdlReader(sr, errors);
+
+				document = reader.ReadDocument();
+
+				using (StreamWriter sw = new StreamWriter("MigraDoc.xml.error"))
+				{
+					foreach (MigraDoc.DocumentObjectModel.IO.DdlReaderError error in errors)
+					{
+						sw.WriteLine("{0}:{1} {2} {3}", error.SourceLine, error.SourceColumn, error.ErrorLevel, error.ErrorMessage);
+
+					}
+
+				}
+
+			}
+#endif
+
+			var ddl = MigraDoc.DocumentObjectModel.IO.DdlWriter.WriteToString(document);
 
 #if true
             var renderer = new RtfDocumentRenderer();

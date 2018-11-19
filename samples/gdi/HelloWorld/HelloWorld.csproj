@@ -37,20 +37,20 @@
     </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MigraDoc.DocumentObjectModel-gdi, Version=1.50.4845.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\PDFsharp-MigraDoc-gdi.1.50.4845-RC2a\lib\net20\MigraDoc.DocumentObjectModel-gdi.dll</HintPath>
+    <Reference Include="MigraDoc.DocumentObjectModel-gdi">
+      <HintPath>..\..\..\..\MigraDoc\MigraDoc\src\MigraDoc.DocumentObjectModel-gdi\bin\Debug\MigraDoc.DocumentObjectModel-gdi.dll</HintPath>
     </Reference>
-    <Reference Include="MigraDoc.Rendering-gdi, Version=1.50.4845.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\PDFsharp-MigraDoc-gdi.1.50.4845-RC2a\lib\net20\MigraDoc.Rendering-gdi.dll</HintPath>
+    <Reference Include="MigraDoc.Rendering-gdi">
+      <HintPath>..\..\..\..\MigraDoc\MigraDoc\src\MigraDoc.Rendering-gdi\bin\Debug\MigraDoc.Rendering-gdi.dll</HintPath>
     </Reference>
-    <Reference Include="MigraDoc.RtfRendering-gdi, Version=1.50.4845.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\PDFsharp-MigraDoc-gdi.1.50.4845-RC2a\lib\net20\MigraDoc.RtfRendering-gdi.dll</HintPath>
+    <Reference Include="MigraDoc.RtfRendering-gdi">
+      <HintPath>..\..\..\..\MigraDoc\MigraDoc\src\MigraDoc.RtfRendering-gdi\bin\Debug\MigraDoc.RtfRendering-gdi.dll</HintPath>
     </Reference>
-    <Reference Include="PdfSharp-gdi, Version=1.50.4845.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\PDFsharp-MigraDoc-gdi.1.50.4845-RC2a\lib\net20\PdfSharp-gdi.dll</HintPath>
+    <Reference Include="PdfSharp-gdi">
+      <HintPath>..\..\..\..\MigraDoc\PDFsharp\src\PdfSharp-gdi\bin\Debug\PdfSharp-gdi.dll</HintPath>
     </Reference>
-    <Reference Include="PdfSharp.Charting-gdi, Version=1.50.4845.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\PDFsharp-MigraDoc-gdi.1.50.4845-RC2a\lib\net20\PdfSharp.Charting-gdi.dll</HintPath>
+    <Reference Include="PdfSharp.Charting-gdi">
+      <HintPath>..\..\..\..\MigraDoc\PDFsharp\src\PdfSharp.Charting-gdi\bin\Debug\PdfSharp.Charting-gdi.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
