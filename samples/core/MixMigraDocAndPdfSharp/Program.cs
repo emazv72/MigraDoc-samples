@@ -75,10 +75,9 @@ namespace MixMigraDocAndPdfSharp
 			para.Format.Borders.Color = Colors.Gold;
 
 #if DEBUG
-			//MigraDoc.DocumentObjectModel.IO.DdlWriter.WriteToFile(doc, "MigraDoc.mddl");
-			//var doc2 = MigraDoc.DocumentObjectModel.IO.DdlReader.DocumentFromFile("MigraDoc.mddl");
 
-			//MigraDoc.DocumentObjectModel.IO.Xml.DdlWriter.WriteToFile(doc, "MigraDoc.xml");
+			MigraDoc.DocumentObjectModel.IO.Xml.DdlWriter.WriteToFile(doc, "MigraDoc.xml");
+
 			Document doc3 = null;
 			using (StreamReader sr = File.OpenText("MigraDoc.xml"))
 			{
@@ -87,7 +86,7 @@ namespace MixMigraDocAndPdfSharp
 
 				doc3 = reader.ReadDocument();
 
-				using (StreamWriter sw = new StreamWriter("MigraDoc.xml.error"))
+				using (StreamWriter sw = new StreamWriter("MigraDoc.xml.errors"))
 				{
 					foreach (MigraDoc.DocumentObjectModel.IO.DdlReaderError error in errors)
 					{

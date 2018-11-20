@@ -17,15 +17,8 @@ namespace HelloMigraDoc
 
 			//var ddl = MigraDoc.DocumentObjectModel.IO.DdlWriter.WriteToString(document);
 			//MigraDoc.DocumentObjectModel.IO.DdlWriter.WriteToFile(document, "MigraDoc.mdddl");
-
-			// genera xml
-			//MigraDoc.DocumentObjectModel.IO.Xml.DdlWriter.WriteToFile(document, "MigraDoc.xml");
-
-			// genera mddl
-			//MigraDoc.DocumentObjectModel.IO.DdlWriter.WriteToFile(document, "MigraDoc.mdddl");
-
-			var document2 = MigraDoc.DocumentObjectModel.IO.DdlReader.DocumentFromFile("MigraDoc.mdddl");
-			//var document3 = MigraDoc.DocumentObjectModel.IO.Xml.DdlReader.DocumentFromFile("MigraDoc.xml");
+			
+			MigraDoc.DocumentObjectModel.IO.Xml.DdlWriter.WriteToFile(document, "MigraDoc.xml");
 
 			MigraDoc.DocumentObjectModel.Document document3 = null;
 

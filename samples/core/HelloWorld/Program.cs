@@ -18,13 +18,18 @@ namespace HelloWorld
             var document = CreateDocument();
 
 #if DEBUG
+
+
 			MigraDoc.DocumentObjectModel.IO.Xml.DdlWriter.WriteToFile(document, "MigraDoc.xml");
+
+			MigraDoc.DocumentObjectModel.Document document3 = null;
+
 			using (StreamReader sr = File.OpenText("MigraDoc.xml"))
 			{
 				var errors = new MigraDoc.DocumentObjectModel.IO.DdlReaderErrors();
 				var reader = new MigraDoc.DocumentObjectModel.IO.Xml.DdlReader(sr, errors);
 
-				document = reader.ReadDocument();
+				document3 = reader.ReadDocument();
 
 				using (StreamWriter sw = new StreamWriter("MigraDoc.xml.error"))
 				{
@@ -51,7 +56,7 @@ namespace HelloWorld
             var pdfRenderer = new PdfDocumentRenderer(unicode);
 
             // Associate the MigraDoc document with a renderer.
-            pdfRenderer.Document = document;
+            pdfRenderer.Document = document3;
 
             // Layout and render document to PDF.
             pdfRenderer.RenderDocument();

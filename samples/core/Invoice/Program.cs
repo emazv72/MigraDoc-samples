@@ -23,11 +23,8 @@ namespace Invoice
             document.UseCmykColor = true;
 
 #if DEBUG
-            // For debugging only...
-            MigraDoc.DocumentObjectModel.IO.DdlWriter.WriteToFile(document, "MigraDoc.mdddl");
-            //MigraDoc.DocumentObjectModel.IO.Xml.DdlWriter.WriteToFile(document, "MigraDoc.xml");
 
-            var document2 = MigraDoc.DocumentObjectModel.IO.DdlReader.DocumentFromFile("MigraDoc.mdddl");
+			MigraDoc.DocumentObjectModel.IO.Xml.DdlWriter.WriteToFile(document, "MigraDoc.xml");
 
 			MigraDoc.DocumentObjectModel.Document document3 = null;
 
@@ -42,17 +39,13 @@ namespace Invoice
 				{
 					foreach (MigraDoc.DocumentObjectModel.IO.DdlReaderError error in errors)
 					{
-						sw.WriteLine("{0}:{1} {2} {3}",  error.SourceLine, error.SourceColumn, error.ErrorLevel, error.ErrorMessage);
+						sw.WriteLine("{0}:{1} {2} {3}", error.SourceLine, error.SourceColumn, error.ErrorLevel, error.ErrorMessage);
 
 					}
 
 				}
 
 			}
-
-			//var document3 = MigraDoc.DocumentObjectModel.IO.Xml.DdlReader.DocumentFromFile("MigraDoc.xml");
-			//document = document2;
-			// With PDFsharp 1.50 beta 3 there is a known problem: the blank before "by" gets lost while persisting as MDDDL.
 #endif
 
 			// Create a renderer for PDF that uses Unicode font encoding.
