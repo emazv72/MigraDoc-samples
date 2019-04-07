@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Document>
+    <Attributes>
+        <Info Title="Hello, MigraDoc" Subject="Demonstrates an excerpt of the capabilities of MigraDoc." Author="Stefan Lange" />
+    </Attributes>
+    <Styles>
+        <Style Name="Normal">
+            <Font Name="Segoe UI" />
+            <ParagraphFormat />
+        </Style>
+        <Style Name="Heading1">
+            <Font Name="Segoe UI Light" Size="16" Color="DarkBlue" />
+            <ParagraphFormat SpaceAfter="6" KeepWithNext="true" PageBreakBefore="true" OutlineLevel="Level1" />
+        </Style>
+        <Style Name="Heading2">
+            <Font Size="14" />
+            <ParagraphFormat SpaceBefore="6" PageBreakBefore="false" OutlineLevel="Level2" />
+        </Style>
+        <Style Name="Heading3">
+            <Font Size="12" Italic="true" />
+            <ParagraphFormat SpaceAfter="3" OutlineLevel="Level3" />
+        </Style>
+        <Style Name="Heading4">
+            <ParagraphFormat OutlineLevel="Level4" />
+        </Style>
+        <Style Name="Heading5">
+            <ParagraphFormat OutlineLevel="Level5" />
+        </Style>
+        <Style Name="Heading6">
+            <ParagraphFormat OutlineLevel="Level6" />
+        </Style>
+        <Style Name="Heading7">
+            <ParagraphFormat OutlineLevel="Level7" />
+        </Style>
+        <Style Name="Heading8">
+            <ParagraphFormat OutlineLevel="Level8" />
+        </Style>
+        <Style Name="Heading9">
+            <ParagraphFormat OutlineLevel="Level9" />
+        </Style>
+        <Style Name="List" />
+        <Style Name="Footnote" />
+        <Style Name="Header">
+            <ParagraphFormat>
+                <TabStops>
+                    <TabStop Add="true" Position="16cm" Alignment="Right" />
+                </TabStops>
+            </ParagraphFormat>
+        </Style>
+        <Style Name="Footer">
+            <ParagraphFormat>
+                <TabStops>
+                    <TabStop Add="true" Position="8cm" Alignment="Center" />
+                </TabStops>
+            </ParagraphFormat>
+        </Style>
+        <Style Name="Hyperlink" />
+        <Style Name="InvalidStyleName">
+            <Font Bold="true" Underline="Dash" Color="Lime" />
+            <ParagraphFormat />
+        </Style>
+        <Style Name="TextBox" BaseStyle="Normal">
+            <ParagraphFormat Alignment="Justify">
+                <Borders Width="2.5" DistanceFromTop="3" DistanceFromBottom="3" DistanceFromLeft="3" DistanceFromRight="3" />
+                <Shading Color="SkyBlue" />
+            </ParagraphFormat>
+        </Style>
+        <Style Name="TOC" BaseStyle="Normal">
+            <Font Color="Blue" />
+            <ParagraphFormat>
+                <TabStops>
+                    <TabStop Add="true" Position="16cm" Alignment="Right" Leader="Dots" />
+                </TabStops>
+            </ParagraphFormat>
+        </Style>
+    </Styles>
+    <Sections>
+        <Section>
+            
+            <p>
+                <Attributes>
+                    <Format SpaceAfter="3cm" />
+                </Attributes>
+            </p>
+            <Image Name="../../../../assets/images/Logo landscape.png" Width="10cm">
+                
+                
+            </Image>
+            <p>
+                <Attributes>
+                    <Format SpaceBefore="8cm" SpaceAfter="3cm">
+                        <Font Size="16" Color="DarkRed" />
+                    </Format>
+                </Attributes>A sample document that demonstrates the<br />capabilities of MigraDoc</p>
+            <p>
+                Rendering date: <Field Type="Date" />
+            </p>
+            <Pagebreak />
+            <p>
+                <Attributes>
+                    <Format SpaceAfter="24" OutlineLevel="Level1">
+                        <Font Size="14" Bold="true" />
+                    </Format>
+                </Attributes>Table of Contents</p>
+            <p Style="TOC">
+                
+                <Hyperlink Name="Paragraphs">Paragraphs<tab />
+                    <Field Type="PageRef" Name="Paragraphs" />
+                </Hyperlink>
+            </p>
+            <p Style="TOC">
+                
+                <Hyperlink Name="Tables">Tables<tab />
+                    <Field Type="PageRef" Name="Tables" />
+                </Hyperlink>
+            </p>
+            <p Style="TOC">
+                
+                <Hyperlink Name="Charts">Charts<tab />
+                    <Field Type="PageRef" Name="Charts" />
+                </Hyperlink>
+            </p>
+        </Section>
+        <Section>
+            <Attributes>
+                <PageSetup OddAndEvenPagesHeaderFooter="true" StartingNumber="1" />
+            </Attributes>
+            <PrimaryHeader>
+                
+                <p>
+                    
+                    <tab />Odd Page Header</p>
+            </PrimaryHeader>
+            <EvenpageHeader>
+                
+                <p>
+                    Even Page Header</p>
+            </EvenpageHeader>
+            <PrimaryFooter>
+                
+                <p>
+                    
+                    <tab />
+                    <Field Type="Page" />
+                </p>
+            </PrimaryFooter>
+            <EvenpageFooter>
+                
+                <p>
+                    
+                    <tab />
+                    <Field Type="Page" />
+                </p>
+            </EvenpageFooter>
+            <p Style="Heading1">
+                Paragraph Layout Overview<Field Name="Paragraphs" Type="Bookmark" />
+            </p>
+            <p Style="Heading2">
+                Alignment</p>
+            <p Style="Heading3">
+                Left Aligned</p>
+            <p>
+                <Attributes>
+                    <Format Alignment="Left" />
+                </Attributes>Loboreet autpat, quis adigna conse dipit la consed exeril et utpatetuer autat, voloboreet, consequamet ilit nos aut in henit ullam, sim doloreratis dolobore tat, venim quissequat. Nisci tat laor ametumsan vulla feuisim ing eliquisi tatum autat, velenisit iustionsed tis dunt exerostrud dolore verae.</p>
+            <p Style="Heading3">
+                Right Aligned</p>
+            <p>
+                <Attributes>
+                    <Format Alignment="Right" />
+                </Attributes>Loboreet autpat, quis adigna conse dipit la consed exeril et utpatetuer autat, voloboreet, consequamet ilit nos aut in henit ullam, sim doloreratis dolobore tat, venim quissequat. Nisci tat laor ametumsan vulla feuisim ing eliquisi tatum autat, velenisit iustionsed tis dunt exerostrud dolore verae.</p>
+            <p Style="Heading3">
+                Centered</p>
+            <p>
+                <Attributes>
+                    <Format Alignment="Center" />
+                </Attributes>Loboreet autpat, quis adigna conse dipit la consed exeril et utpatetuer autat, voloboreet, consequamet ilit nos aut in henit ullam, sim doloreratis dolobore tat, venim quissequat. Nisci tat laor ametumsan vulla feuisim ing eliquisi tatum autat, velenisit iustionsed tis dunt exerostrud dolore verae.</p>
+            <p Style="Heading3">
+                Justified</p>
+            <p>
+                <Attributes>
+                    <Format Alignment="Justify" />
+                </Attributes>Incinibh ecte dionsent am, sisl ute magna faccum ing eu feugait ulla consequismod tetum zzrilluptat. Ut velis accum dit la corper inci essequat, venis nisl dolutat. Sandipit esequisit autpat. Magnibh et laortie feugiamcommy nulluptat dolorpero euipis nonum augait wis dit, quamcon sequipit at vel il eui blaorper si tat ipit at nis nullan hent num dunt irit, sum dolendio consendigna consent lan ut illan etue miniam dolenisis nonsenim inim quat, conulla orercinisim vel inci ent illam quat volore veliquam amconsequat. Ut lut incincipit nullaor iriurercip et luptat erat illamco mmoluptat.<br />Ut iriusciduis nonsed do el dolut ea autem il dolore verci blam, quatue el ute facilis cidunt dit alisl ut lut num vercinc illaore del ilisi blandre commodit, quamcon sequipsusto dunt ver illaorperit utpat, velisci lisciniam vent alis nostisi et, quisit, con eu facipit vulputpat.</p>
+            <p Style="Heading2">
+                Indent</p>
+            <p Style="Heading3">
+                Left Indent</p>
+            <p>
+                <Attributes>
+                    <Format LeftIndent="2cm" />
+                </Attributes>Loboreet autpat, quis adigna conse dipit la consed exeril et utpatetuer autat, voloboreet, consequamet ilit nos aut in henit ullam, sim doloreratis dolobore tat, venim quissequat. Nisci tat laor ametumsan vulla feuisim ing eliquisi tatum autat, velenisit iustionsed tis dunt exerostrud dolore verae.</p>
+            <p Style="Heading3">
+                Right Indent</p>
+            <p>
+                <Attributes>
+                    <Format RightIndent="1in" />
+                </Attributes>Loboreet autpat, quis adigna conse dipit la consed exeril et utpatetuer autat, voloboreet, consequamet ilit nos aut in henit ullam, sim doloreratis dolobore tat, venim quissequat. Nisci tat laor ametumsan vulla feuisim ing eliquisi tatum autat, velenisit iustionsed tis dunt exerostrud dolore verae.</p>
+            <p Style="Heading3">
+                First Line Indent</p>
+            <p>
+                <Attributes>
+                    <Format FirstLineIndent="12mm" />
+                </Attributes>Loboreet autpat, quis adigna conse dipit la consed exeril et utpatetuer autat, voloboreet, consequamet ilit nos aut in henit ullam, sim doloreratis dolobore tat, venim quissequat. Nisci tat laor ametumsan vulla feuisim ing eliquisi tatum autat, velenisit iustionsed tis dunt exerostrud dolore verae.</p>
+            <p Style="Heading3">
+                First Line Negative Indent</p>
+            <p>
+                <Attributes>
+                    <Format LeftIndent="1.5cm" FirstLineIndent="-1.5cm" />
+                </Attributes>Loboreet autpat, quis adigna conse dipit la consed exeril et utpatetuer autat, voloboreet, consequamet ilit nos aut in henit ullam, sim doloreratis dolobore tat, venim quissequat. Nisci tat laor ametumsan vulla feuisim ing eliquisi tatum autat, velenisit iustionsed tis dunt exerostrud dolore verae.</p>
+            <p Style="Heading2">
+                Formatted Text</p>
+            <p>
+                Text can be formatted <Font Bold="true">bold</Font>, <Font Italic="true">italic</Font>, or <Font Bold="true" Italic="true">bold &amp; italic</Font>.<br />You can set the <Font Size="15">size</Font>, the <Font Color="Firebrick">color</Font>, the <Font Name="Times New Roman" Size="12">font</Font>.<br />You can set the <Font Subscript="true">subscript</Font> or <Font Superscript="true">superscript</Font>.</p>
+            <Pagebreak />
+            <p Style="Heading2">
+                Borders and Shading</p>
+            <p Style="Heading3">
+                Border around Paragraph</p>
+            <p>
+                <Attributes>
+                    <Format>
+                        <Borders Width="2.5" Color="Navy" DistanceFromTop="3" DistanceFromBottom="3" DistanceFromLeft="3" DistanceFromRight="3" />
+                    </Format>
+                </Attributes>Incinibh ecte dionsent am, sisl ute magna faccum ing eu feugait ulla consequismod tetum zzrilluptat. Ut velis accum dit la corper inci essequat, venis nisl dolutat. Sandipit esequisit autpat. Magnibh et laortie feugiamcommy nulluptat dolorpero euipis nonum augait wis dit, quamcon sequipit at vel il eui blaorper si tat ipit at nis nullan hent num dunt irit, sum dolendio consendigna consent lan ut illan etue miniam dolenisis nonsenim inim quat, conulla orercinisim vel inci ent illam quat volore veliquam amconsequat. Ut lut incincipit nullaor iriurercip et luptat erat illamco mmoluptat.<br />Ut iriusciduis nonsed do el dolut ea autem il dolore verci blam, quatue el ute facilis cidunt dit alisl ut lut num vercinc illaore del ilisi blandre commodit, quamcon sequipsusto dunt ver illaorperit utpat, velisci lisciniam vent alis nostisi et, quisit, con eu facipit vulputpat.</p>
+            <p Style="Heading3">
+                Shading</p>
+            <p>
+                <Attributes>
+                    <Format>
+                        <Shading Color="LightCoral" />
+                    </Format>
+                </Attributes>Loboreet autpat, quis adigna conse dipit la consed exeril et utpatetuer autat, voloboreet, consequamet ilit nos aut in henit ullam, sim doloreratis dolobore tat, venim quissequat. Nisci tat laor ametumsan vulla feuisim ing eliquisi tatum autat, velenisit iustionsed tis dunt exerostrud dolore verae.</p>
+            <p Style="Heading3">
+                Borders &amp; Shading</p>
+            <p Style="TextBox">
+                Incinibh ecte dionsent am, sisl ute magna faccum ing eu feugait ulla consequismod tetum zzrilluptat. Ut velis accum dit la corper inci essequat, venis nisl dolutat. Sandipit esequisit autpat. Magnibh et laortie feugiamcommy nulluptat dolorpero euipis nonum augait wis dit, quamcon sequipit at vel il eui blaorper si tat ipit at nis nullan hent num dunt irit, sum dolendio consendigna consent lan ut illan etue miniam dolenisis nonsenim inim quat, conulla orercinisim vel inci ent illam quat volore veliquam amconsequat. Ut lut incincipit nullaor iriurercip et luptat erat illamco mmoluptat.<br />Ut iriusciduis nonsed do el dolut ea autem il dolore verci blam, quatue el ute facilis cidunt dit alisl ut lut num vercinc illaore del ilisi blandre commodit, quamcon sequipsusto dunt ver illaorperit utpat, velisci lisciniam vent alis nostisi et, quisit, con eu facipit vulputpat.</p>
+            <p Style="Heading1">
+                Table Overview<Field Name="Tables" Type="Bookmark" />
+            </p>
+            <p Style="Heading2">
+                Simple Tables</p>
+            <Table>
+                <Attributes>
+                    <Borders Width="0.75" />
+                </Attributes>
+                <Columns>
+                    <Column Width="2cm">
+                        <Attributes>
+                            <Format Alignment="Center" />
+                        </Attributes>
+                    </Column>
+                    <Column Width="5cm">
+                        
+                    </Column>
+                </Columns>
+                <Rows>
+                    <Row>
+                        <Attributes>
+                            <Shading Color="PaleGoldenrod" />
+                        </Attributes>
+                        <Cell>
+                            <Attributes>
+                                <Borders>
+                                    <Top Style="Single" Width="1.5" Color="Black" />
+                                    <Left Style="Single" Width="1.5" Color="Black" />
+                                </Borders>
+                            </Attributes>
+                            <p>
+                                Itemus</p>
+                        </Cell>
+                        <Cell>
+                            <Attributes>
+                                <Borders>
+                                    <Top Style="Single" Width="1.5" Color="Black" />
+                                    <Right Style="Single" Width="1.5" Color="Black" />
+                                </Borders>
+                            </Attributes>
+                            <p>
+                                Descriptum</p>
+                        </Cell>
+                    </Row>
+                    <Row>
+                        
+                        <Cell>
+                            <Attributes>
+                                <Borders>
+                                    <Left Style="Single" Width="1.5" Color="Black" />
+                                </Borders>
+                            </Attributes>
+                            <p>
+                                1</p>
+                        </Cell>
+                        <Cell>
+                            <Attributes>
+                                <Borders>
+                                    <Right Style="Single" Width="1.5" Color="Black" />
+                                </Borders>
+                            </Attributes>
+                            <p>
+                                Andigna cons nonsectem accummo diamet nis diat.</p>
+                        </Cell>
+                    </Row>
+                    <Row>
+                        
+                        <Cell>
+                            <Attributes>
+                                <Borders>
+                                    <Left Style="Single" Width="1.5" Color="Black" />
+                                    <Bottom Style="Single" Width="1.5" Color="Black" />
+                                </Borders>
+                            </Attributes>
+                            <p>
+                                2</p>
+                        </Cell>
+                        <Cell>
+                            <Attributes>
+                                <Borders>
+                                    <Bottom Style="Single" Width="1.5" Color="Black" />
+                                    <Right Style="Single" Width="1.5" Color="Black" />
+                                </Borders>
+                            </Attributes>
+                            <p>
+                                Loboreet autpat, quis adigna conse dipit la consed exeril et utpatetuer autat, voloboreet, consequamet ilit nos aut in henit ullam, sim doloreratis dolobore tat, venim quissequat. Nisci tat laor ametumsan vulla feuisim ing eliquisi tatum autat, velenisit iustionsed tis dunt exerostrud dolore verae.</p>
+                        </Cell>
+                    </Row>
+                </Rows>
+            </Table>
+            <p Style="Heading2">
+                Cell Alignment</p>
+            <Table TopPadding="5" BottomPadding="5">
+                <Attributes>
+                    <Format>
+                        <Shading Color="LavenderBlush" />
+                    </Format>
+                    <Borders Visible="true" />
+                    <Shading Color="Salmon" />
+                </Attributes>
+                <Columns>
+                    <Column>
+                        <Attributes>
+                            <Format Alignment="Left" />
+                        </Attributes>
+                    </Column>
+                    <Column>
+                        <Attributes>
+                            <Format Alignment="Center" />
+                        </Attributes>
+                    </Column>
+                    <Column>
+                        <Attributes>
+                            <Format Alignment="Right" />
+                        </Attributes>
+                    </Column>
+                </Columns>
+                <Rows Height="35">
+                    <Row VerticalAlignment="Top">
+                        
+                        <Cell>
+                            
+                            <p>
+                                Text</p>
+                        </Cell>
+                        <Cell>
+                            
+                            <p>
+                                Text</p>
+                        </Cell>
+                        <Cell>
+                            
+                            <p>
+                                Text</p>
+                        </Cell>
+                    </Row>
+                    <Row VerticalAlignment="Center">
+                        
+                        <Cell>
+                            
+                            <p>
+                                Text</p>
+                        </Cell>
+                        <Cell>
+                            
+                            <p>
+                                Text</p>
+                        </Cell>
+                        <Cell>
+                            
+                            <p>
+                                Text</p>
+                        </Cell>
+                    </Row>
+                    <Row VerticalAlignment="Bottom">
+                        
+                        <Cell>
+                            
+                            <p>
+                                Text</p>
+                        </Cell>
+                        <Cell>
+                            
+                            <p>
+                                Text</p>
+                        </Cell>
+                        <Cell>
+                            
+                            <p>
+                                Text</p>
+                        </Cell>
+                    </Row>
+                </Rows>
+            </Table>
+            <p Style="Heading2">
+                Cell Merge</p>
+            <Table TopPadding="5" BottomPadding="5">
+                <Attributes>
+                    <Borders Visible="true" />
+                </Attributes>
+                <Columns>
+                    <Column>
+                        <Attributes>
+                            <Format Alignment="Left" />
+                        </Attributes>
+                    </Column>
+                    <Column>
+                        <Attributes>
+                            <Format Alignment="Center" />
+                        </Attributes>
+                    </Column>
+                    <Column>
+                        <Attributes>
+                            <Format Alignment="Right" />
+                        </Attributes>
+                    </Column>
+                </Columns>
+                <Rows Height="35">
+                    <Row>
+                        
+                        <Cell MergeRight="1">
+                            
+                            <p>
+                                Merge Right</p>
+                        </Cell>
+                    </Row>
+                    <Row VerticalAlignment="Bottom">
+                        
+                        <Cell MergeDown="1" VerticalAlignment="Bottom">
+                            
+                            <p>
+                                Merge Down</p>
+                        </Cell>
+                    </Row>
+                    <Row>
+                        
+                    </Row>
+                </Rows>
+            </Table>
+            <p Style="Heading1">
+                Chart Overview<Field Name="Charts" Type="Bookmark" />
+            </p>
+            <p Style="Heading2">
+                Sample Chart</p>
+            <Chart Type="Line" Height="12cm" Width="16cm" Left="0">
+                
+                
+                <PlotArea>
+                    <Attributes>
+                        <LineFormat Width="1" Color="DarkGray" />
+                    </Attributes>
+                </PlotArea>
+                <xaxis MajorTickMark="Outside">
+                    <Attributes>
+                        <Title Caption="X-Axis" />
+                    </Attributes>
+                </xaxis>
+                <yaxis HasMajorGridLines="true" MajorTickMark="Outside">
+                    
+                </yaxis>
+                <Series ChartType="Column2D" HasDataLabel="true">
+                    
+                    <Point>1</Point>
+                    <Point>17</Point>
+                    <Point>45</Point>
+                    <Point>5</Point>
+                    <Point>3</Point>
+                    <Point>20</Point>
+                    <Point>11</Point>
+                    <Point>23</Point>
+                    <Point>8</Point>
+                    <Point>19</Point>
+                </Series>
+                <Series ChartType="Line">
+                    
+                    <Point>41</Point>
+                    <Point>7</Point>
+                    <Point>5</Point>
+                    <Point>45</Point>
+                    <Point>13</Point>
+                    <Point>10</Point>
+                    <Point>21</Point>
+                    <Point>13</Point>
+                    <Point>18</Point>
+                    <Point>9</Point>
+                </Series>
+                <XSeries>
+                    <XValue>A</XValue>
+                    <XValue>B</XValue>
+                    <XValue>C</XValue>
+                    <XValue>D</XValue>
+                    <XValue>E</XValue>
+                    <XValue>F</XValue>
+                    <XValue>G</XValue>
+                    <XValue>H</XValue>
+                    <XValue>I</XValue>
+                    <XValue>J</XValue>
+                    <XValue>K</XValue>
+                    <XValue>L</XValue>
+                    <XValue>M</XValue>
+                    <XValue>N</XValue>
+                </XSeries>
+            </Chart>
+        </Section>
+    </Sections>
+</Document>
