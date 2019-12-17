@@ -34,19 +34,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MigraDoc.DocumentObjectModel">
-      <HintPath>..\..\..\..\..\lib-dist-net\MigraDoc\Debug\core\MigraDoc.DocumentObjectModel.dll</HintPath>
+      <HintPath>..\..\..\..\MigraDoc\MigraDoc\src\MigraDoc.Rendering\bin\Debug\MigraDoc.DocumentObjectModel.dll</HintPath>
     </Reference>
     <Reference Include="MigraDoc.Rendering">
-      <HintPath>..\..\..\..\..\lib-dist-net\MigraDoc\Debug\core\MigraDoc.Rendering.dll</HintPath>
-    </Reference>
-    <Reference Include="MigraDoc.RtfRendering">
-      <HintPath>..\..\..\..\..\lib-dist-net\MigraDoc\Debug\core\MigraDoc.RtfRendering.dll</HintPath>
+      <HintPath>..\..\..\..\MigraDoc\MigraDoc\src\MigraDoc.Rendering\bin\Debug\MigraDoc.Rendering.dll</HintPath>
     </Reference>
     <Reference Include="PdfSharp">
-      <HintPath>..\..\..\..\..\lib-dist-net\MigraDoc\Debug\core\PdfSharp.dll</HintPath>
+      <HintPath>..\..\..\..\MigraDoc\MigraDoc\src\MigraDoc.Rendering\bin\Debug\PdfSharp.dll</HintPath>
     </Reference>
     <Reference Include="PdfSharp.Charting">
-      <HintPath>..\..\..\..\..\lib-dist-net\MigraDoc\Debug\core\PdfSharp.Charting.dll</HintPath>
+      <HintPath>..\..\..\..\MigraDoc\MigraDoc\src\MigraDoc.Rendering\bin\Debug\PdfSharp.Charting.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
